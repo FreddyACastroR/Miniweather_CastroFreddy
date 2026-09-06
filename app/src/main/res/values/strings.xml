@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Miniweather_CastroF</string>
+    <string name="rainy">Lluvioso</string>
+    <string name="cloudy">Nublado</string>
+    <string name="snowy">Nevado</string>
+    <string name="stormy">Tormenta</string>
+    <string name="sunny">Soleado</string>
+    <string name="windy">Vientoso</string>
 </resources>
