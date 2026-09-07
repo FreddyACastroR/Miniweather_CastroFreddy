@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btn_save_city"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
@@ -26,7 +26,6 @@
         android:id="@+id/tvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
         android:fontFamily="sans-serif-black"
         android:text="tv City"
         android:textColor="@color/mustard"
@@ -34,31 +33,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivWeather" />
+        tools:layout_editor_absoluteY="121dp" />
 
     <ImageView
         android:id="@+id/ivWeather"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="44dp"
         android:src="@drawable/ic_sunny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGreeting" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCity" />
 
     <TextView
         android:id="@+id/tvTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="tv Temperature"
-        android:textSize="70sp"
+        android:layout_marginTop="52dp"
         android:fontFamily="sans-serif-black"
+        android:text="25C"
+        android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+        app:layout_constraintTop_toBottomOf="@+id/ivWeather" />
 
     <TextView
         android:id="@+id/tvWeather"
