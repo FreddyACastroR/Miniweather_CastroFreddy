@@ -11,6 +11,7 @@ import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import castrofreddy.miniweather_castrof.utilities.WeatherService
 
@@ -21,11 +22,14 @@ class CityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_city)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btn_save_city)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
+
         val service: WeatherService = WeatherService(this)
         val citySelector: Spinner = findViewById<Spinner>(R.id.city_selector)
 
@@ -48,7 +52,6 @@ class CityActivity : AppCompatActivity() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
         }
 

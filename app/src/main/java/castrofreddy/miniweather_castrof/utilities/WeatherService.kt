@@ -26,6 +26,10 @@ class WeatherService(private val context: Context) {
         )
     }
 
+    fun getWeather(city: String): Weather {
+        return generateWeather()
+    }
+
     private fun generateWeather(): Weather{
         val temp = (-15..50).random()
         var weatherIndex = -1
